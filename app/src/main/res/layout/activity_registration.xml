@@ -1,9 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_margin="20dp"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+
+
     tools:context=".RegistrationActivity">
 
-</LinearLayout>
+
+    <TextView
+        android:id="@+id/register_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:text="RegistrationForm"
+        android:textSize="25dp"
+
+        android:gravity="center"
+        android:textStyle="bold"
+        android:padding="10dp"
+        />
+
+    <EditText
+        android:id="@+id/firstname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="FirstName"
+        android:layout_marginTop="60dp"
+
+        />
+
+
+    <EditText
+        android:id="@+id/lastname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="LastName"
+        android:layout_marginTop="100dp"
+
+        />
+
+    <EditText
+        android:id="@+id/mobail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="150dp"
+        android:hint="MobailNo" />
+
+    <EditText
+        android:id="@+id/passworld"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="PassWorld"
+        android:layout_marginTop="200dp"
+        />
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        />
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="270dp"
+        android:paddingTop="10dp"
+
+        android:text="Already have a account"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="133dp"
+        android:layout_marginLeft="133dp"
+        android:layout_marginTop="328dp"
+        android:layout_marginEnd="150dp"
+        android:layout_marginRight="150dp"
+        android:layout_marginBottom="315dp"
+        android:text="Next" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="220dp"
+        android:layout_marginTop="300dp"
+        android:layout_marginBottom="322dp"
+        android:paddingLeft="7dp"
+        android:paddingTop="12dp"
+        android:text="Login"
+        android:textColor="@android:color/holo_green_dark" />
+
+
+
+
+
