@@ -14,17 +14,19 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        getSupportActionBar().hide();
-         Handler h1 = new Handler();
-         h1.postDelayed(new Runnable() {
-             @Override
-             public void run() {
-                 Intent i = new Intent(SplashActivity.this,LoginActivity.class);
-                 startActivity(i);
-                 finish();
+        // Added new comment
 
-             }
-         },3000);
+        getSupportActionBar().hide();
+        Handler h1 = new Handler();
+        h1.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                Intent i = new Intent(SplashActivity.this,LoginActivity.class);
+                startActivity(i);
+                finish();
+
+            }
+        },3000);
 
     }
 }

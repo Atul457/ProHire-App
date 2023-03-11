@@ -38,32 +38,32 @@ public class LoginActivity extends AppCompatActivity {
 
                 // Validations
 
-                if (login_username.getText().toString().isEmpty()){
+                if (login_username.getText().toString().isEmpty()) {
                     login_username.setError(("username is required"));
                     return;
                 }
 
-                if (login_password.getText().toString().isEmpty()){
+                if (login_password.getText().toString().isEmpty()) {
                     login_password.setError("password is required");
                     return;
                 }
 
-                if (login_username.getText().toString().length() <= minMaxLength){
+                if (login_username.getText().toString().length() <= minMaxLength) {
                     login_username.setError("username length should be greater than 8");
                     return;
                 }
 
-                if (login_password.getText().toString().length() <= minMaxLength){
+                if (login_password.getText().toString().length() <= minMaxLength) {
                     login_password.setError("password length must be greater than 8");
                     return;
                 }
 
-                if  (!login_username.getText().toString().contains("@") || !login_username.getText().toString().contains(".com")){
-                   login_username.setError("Incorrect username");
-                   return;
+                if (!login_username.getText().toString().contains("@") || !login_username.getText().toString().contains(".com")) {
+                    login_username.setError("Incorrect username");
+                    return;
                 }
 
-                Toast.makeText(LoginActivity.this,"Logged in successfully", Toast.LENGTH_SHORT).show();
+                Toast.makeText(LoginActivity.this, "Logged in successfully", Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(LoginActivity.this, HomeActivity.class);
                 startActivity(intent);
                 finish();
