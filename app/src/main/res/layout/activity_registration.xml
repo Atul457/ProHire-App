@@ -33,7 +33,7 @@
                 android:textSize="25dp"
                 android:textAlignment="center"
                 android:textStyle="bold"
-                android:textColor="@color/lightblue"
+                android:textColor="@color/lightBlue"
                 android:gravity="center_horizontal" />
 
             <EditText
@@ -110,19 +110,19 @@
                 android:layout_alignparentBottom="true"
                 android:gravity="center">
 
-            <ImageView
-                android:layout_width="48dp"
-                android:layout_height="48dp"
-                android:id="@+id/su_google"
-                android:src="@drawable/google"
-                android:layout_gravity="center"
-                android:layout_margin="20dp"/>
-           <ImageView
-               android:layout_width="48dp"
-               android:layout_height="48dp"
-               android:id="@+id/su_facebook"
-               android:src="@drawable/facebook"
-               android:layout_gravity="center"/>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/su_google"
+                    android:src="@drawable/google"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"/>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/su_facebook"
+                    android:src="@drawable/facebook"
+                    android:layout_gravity="center"/>
 
             </LinearLayout>
 

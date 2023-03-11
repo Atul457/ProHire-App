@@ -2,8 +2,6 @@ package com.example.crosstalk;
 
 // Imports
 import androidx.appcompat.app.AppCompatActivity;
-
-import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -23,7 +21,6 @@ public class LoginActivity extends AppCompatActivity {
     ImageView si_google;
     ImageView si_facebook;
 
-    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 

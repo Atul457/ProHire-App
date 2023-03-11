@@ -15,7 +15,7 @@
         android:layout_alignParentBottom="true"
         tools:ignore="BottomAppBar">
 
-        </com.google.android.material.bottomappbar.BottomAppBar>
+    </com.google.android.material.bottomappbar.BottomAppBar>
 
 
 
