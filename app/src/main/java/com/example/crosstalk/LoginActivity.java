@@ -2,9 +2,12 @@ package com.example.crosstalk;
 
 // Imports
 import androidx.appcompat.app.AppCompatActivity;
+
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -17,6 +20,10 @@ public class LoginActivity extends AppCompatActivity {
 
     TextView loginButton;
 
+    ImageView si_google;
+    ImageView si_facebook;
+
+    @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 
@@ -28,6 +35,16 @@ public class LoginActivity extends AppCompatActivity {
         login_password = findViewById(R.id.login_password);
         login_username = findViewById(R.id.login_username);
         loginButton = findViewById(R.id.loginButton);
+        si_google = findViewById(R.id.si_google);
+        si_facebook = findViewById(R.id.si_facebook);
+
+        si_facebook.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                //login to facebook
+
+            }
+        });
 
         loginButton.setOnClickListener(new View.OnClickListener() {
             @Override

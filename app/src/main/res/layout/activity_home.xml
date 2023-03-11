@@ -1,76 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#0F172A"
     android:padding="15dp"
-    tools:context=".SplashActivity">
+    tools:context=".HomeActivity">
 
-    <RelativeLayout
+    <com.google.android.material.bottomappbar.BottomAppBar
+
         android:layout_width="match_parent"
-        android:layout_below="@+id/simpleEditText"
-        android:id="@+id/buttonsContainer"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/simpleToast"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:background="@drawable/buttons_view"
-            android:text="@string/hindi"
-            android:textColor="#fff"
-            android:textSize="18dp" />
-
-        <Button
-            android:id="@+id/customToast"
-            android:layout_width="160dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/buttons_view"
-            android:text="English"
-            android:textColor="@color/white"
-            android:textSize="18dp" />
-    </RelativeLayout>
-
-    <Button
-        android:id="@+id/btnChangeText"
-        android:layout_width="match_parent"
-        android:background="@drawable/buttons_view"
         android:layout_height="wrap_content"
-        android:padding="10dp"
         android:layout_alignParentBottom="true"
-        android:text="Speak Hear"
-        android:textColor="#fff"
-        android:layout_marginBottom="20dp"
-        android:textStyle="bold" />
+        tools:ignore="BottomAppBar">
 
-    <TextView
-        android:id="@+id/simpleTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="CrossTalk"
-        android:layout_alignParentTop="true"
-        android:textColor="@color/white"
-        android:textSize="25sp"
-        android:textStyle="bold"
-        android:paddingTop="10dp"
-        />
+        </com.google.android.material.bottomappbar.BottomAppBar>
 
-    <EditText
-        android:id="@+id/simpleEditText"
-        android:layout_width="match_parent"
-        android:layout_height="200dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginBottom="20dp"
-        android:autofillHints="Hindi to English"
-        android:background="@drawable/text_box_view"
-        android:gravity="top"
-        android:hint="Enter text here"
-        android:padding="10dp"
-        android:textColor="@color/white" />
 
 
 </RelativeLayout>
