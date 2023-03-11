@@ -1,104 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="20dp"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
-    android:layout_gravity="center"
+    android:gravity="center"
+    android:background="#0F172A"
     tools:context=".RegistrationActivity">
 
-
-    <TextView
-        android:id="@+id/register_form"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="RegistrationForm"
-        android:textSize="25sp"
-        android:gravity="center"
-        android:textStyle="bold"
-        android:padding="10dp"
-        />
+        android:layout_margin="30dp"
+        app:cardCornerRadius="30dp"
+        app:cardElevation="20dp"
+        android:background="@drawable/custom_edittext">
 
-    <EditText
-        android:id="@+id/firstname"
-        android:layout_marginTop="60dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:autofillHints="First Name"
-        android:hint="FirstName" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/custom_edittext"
+            android:padding="24dp">
 
-    <EditText
-        android:id="@+id/lastname"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="LastName"
-        android:autofillHints="LastName"
-        android:layout_marginTop="100dp"
-        />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="SING UP"
+                android:id="@+id/su_loginText"
+                android:textSize="25dp"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textColor="@color/lightBlue"
+                android:gravity="center_horizontal" />
 
-    <EditText
-        android:id="@+id/mobile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="150dp"
-        android:hint="MobailNo" />
-
-    <EditText
-        android:id="@+id/passworld"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="PassWorld"
-        android:layout_marginTop="200dp"
-        />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/su_login_username"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/person"
+                android:drawablePadding="8dp"
+                android:hint="Username"
+                android:padding="8dp"
+                android:textColor="@color/black_shade_1"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="40dp"/>
 
 
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/su_login_password"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="8dp"
+                android:hint="Password"
+                android:padding="8dp"
+                android:inputType="textPassword"
+                android:textColor="@color/black_shade_1"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="20dp"/>
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:gravity="center"
-        />
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="270dp"
-        android:paddingTop="10dp"
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/su_number"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/local_phone"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:inputType="number"
+                android:hint="Mo number"
+                android:textColor="@color/black_shade_1"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="20dp"/>
 
-        android:text="Already have a account"
-        />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="133dp"
-        android:layout_marginLeft="133dp"
-        android:layout_marginTop="328dp"
-        android:layout_marginEnd="150dp"
-        android:layout_marginRight="150dp"
-        android:layout_marginBottom="315dp"
-        android:text="Next" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginLeft="220dp"
-        android:layout_marginTop="300dp"
-        android:layout_marginBottom="322dp"
-        android:paddingLeft="7dp"
-        android:paddingTop="12dp"
-        android:text="Login"
-        android:textColor="@android:color/holo_green_dark" />
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:id="@+id/su_email"
+                android:background="@drawable/custom_edittext"
+                android:drawableLeft="@drawable/baseline_email_24"
+                android:drawablePadding="8dp"
+                android:padding="8dp"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:textColor="@color/black_shade_1"
+                android:textColorHighlight="@color/cardview_dark_background"
+                android:layout_marginTop="20dp"/>
 
 
-</RelativeLayout>
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:id="@+id/su_loginButton"
+                android:text="Submit"
+                android:textSize="18dp"
+                android:textColor="@color/white"
+                android:layout_marginTop="30dp"
+                android:backgroundTint="@color/lightblue"
+                app:cornerRadius = "20dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignparentBottom="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/su_google"
+                    android:src="@drawable/google"
+                    android:layout_gravity="center"
+                    android:layout_margin="20dp"/>
+                <ImageView
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:id="@+id/su_facebook"
+                    android:src="@drawable/facebook"
+                    android:layout_gravity="center"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
+
+
+
