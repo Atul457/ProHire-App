@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -15,9 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     TextView login_username;
     TextView login_password;
     TextView signupText;
-
-    TextView loginButton;
-
+    Button submitButton;
     ImageView si_google;
     ImageView si_facebook;
 
@@ -27,14 +26,18 @@ public class LoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        if(getSupportActionBar() != null) getSupportActionBar().hide();
-
+        // Initializations
         login_password = findViewById(R.id.login_password);
         login_username = findViewById(R.id.login_username);
-        loginButton = findViewById(R.id.loginButton);
+        submitButton = findViewById(R.id.submitButton);
         si_google = findViewById(R.id.si_google);
         si_facebook = findViewById(R.id.si_facebook);
+        signupText = findViewById(R.id.signupText);
 
+        // Removing header
+        if(getSupportActionBar() != null) getSupportActionBar().hide();
+
+        // Listeners
         si_facebook.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -43,7 +46,7 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        loginButton.setOnClickListener(new View.OnClickListener() {
+        submitButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
@@ -85,16 +88,14 @@ public class LoginActivity extends AppCompatActivity {
             }
         });
 
-        signupText = findViewById(R.id.signupText);
         signupText.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(LoginActivity.this,RegistrationActivity.class);
+                Intent intent = new Intent(LoginActivity.this, RegistrationActivity.class);
                 startActivity(intent);
                 finish();
             }
         });
-
 
     }
 }
