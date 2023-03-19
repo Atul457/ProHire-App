@@ -9,6 +9,4 @@
         android:color="#C6C2C2"
         android:state_selected="false"/>
 
-
-
 </selector>

@@ -72,11 +72,9 @@ public class HomeActivity extends AppCompatActivity {
                         Toast.makeText(HomeActivity.this,"account",Toast.LENGTH_LONG).show();
                         break;
 
-
                     default:
 
                 }
-
                 return true;
             }
         });
