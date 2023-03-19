@@ -20,11 +20,10 @@
         android:layout_height="wrap_content"
         android:id="@+id/nav"
         app:menu="@menu/menu_bar"
-        android:background="@drawable/shape"
+        android:background="@drawable/buttons_view"
         app:itemTextColor="@drawable/slllll"
         app:itemIconTint="@drawable/slllll"
         android:layout_alignParentBottom="true"/>
-
 
 
 </RelativeLayout>

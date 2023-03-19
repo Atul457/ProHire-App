@@ -20,65 +20,81 @@
         android:background="@drawable/searchview_background" />
 
 
-       <androidx.cardview.widget.CardView
-           android:layout_width="340dp"
-           android:layout_height="200dp"
-           android:id="@+id/card_Hf"
-           app:cardElevation="11dp"
-           android:layout_gravity="center"
-           app:cardCornerRadius="11dp"
-           app:cardUseCompatPadding="true">
+    <androidx.cardview.widget.CardView
+        android:layout_width="340dp"
+        android:layout_height="200dp"
+        android:id="@+id/card_Hf"
+        app:cardElevation="11dp"
+        android:layout_gravity="center"
+        app:cardCornerRadius="11dp"
+        app:cardUseCompatPadding="true">
 
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:text="Atul"
-               android:textColor="@color/black_shade_1"
-               android:textStyle="bold"
-               android:textSize="30sp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="12dp">
 
 
-       </androidx.cardview.widget.CardView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_shade_1"
+                android:text="Web Stack Developer"
+                android:textSize="20sp"
+                android:textStyle="bold" />
 
-       <androidx.cardview.widget.CardView
-           android:layout_width="340dp"
-           android:layout_height="200dp"
-           android:id="@+id/card_Hf1"
-           app:cardElevation="11dp"
-           android:layout_gravity="center"
-           app:cardCornerRadius="11dp"
-           app:cardUseCompatPadding="true">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_shade_1"
+                android:text="Mindroots Pvt.Lmt"
+                android:textSize="15sp" />
 
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:text="Atul"
-               android:textColor="@color/black_shade_1"
-               android:textStyle="bold"
-               android:textSize="30sp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black_shade_1"
+                android:text="chandighr , panjab"
+                android:drawableLeft="@drawable/baseline_location_on_24"
+                android:textSize="14sp" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="197dp"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/lightBlue"
+                app:cardCornerRadius="11dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:padding="12dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:Color="@color/white"
+                    android:text="20,000-50,000 per month"
+                    android:textColor="@color/black_shade_1"
+                    android:textSize="15sp" />
+                </LinearLayout>
 
 
-       </androidx.cardview.widget.CardView>
 
-       <androidx.cardview.widget.CardView
-           android:layout_width="340dp"
-           android:layout_height="200dp"
-           android:id="@+id/card_Hf2"
-           app:cardElevation="11dp"
-           android:layout_gravity="center"
-           app:cardCornerRadius="11dp"
-           app:cardUseCompatPadding="true">
-
-           <TextView
-               android:layout_width="wrap_content"
-               android:layout_height="match_parent"
-               android:text="Rutja"
-               android:textColor="@color/black_shade_1"
-               android:textStyle="bold"
-               android:textSize="30sp"/>
+            </androidx.cardview.widget.CardView>
 
 
-       </androidx.cardview.widget.CardView>
+
+
+
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
 
 
 </LinearLayout>
