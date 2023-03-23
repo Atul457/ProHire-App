@@ -3,10 +3,13 @@
 
     <item
         android:color="#fff"
-        android:state_selected="true"/>
+        android:state_selected="true"
+        android:title="selected_item" />
 
     <item
         android:color="#C6C2C2"
-        android:state_selected="false"/>
+        android:state_selected="false"
+        android:title="unselected_item"
+        />
 
 </selector>

@@ -7,7 +7,6 @@
     <color name="black_shade_1">#292036</color>
     <color name="lightPrimaryColor">#2395FE</color>
     <color name="white">#fff</color>
-    <color name="lightBlue">#2395FE</color>
-
-
+    <color name="themeSkyBlue">#2395FE</color>
+    <color name="themeLightBlue">#e7f7fd</color>
 </resources>

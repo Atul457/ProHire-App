@@ -3,17 +3,12 @@ import android.annotation.SuppressLint;
 import android.os.Bundle;
 
 import android.view.MenuItem;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentTransaction;
-
-import android.os.Bundle;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationBarView;
@@ -27,7 +22,7 @@ public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView nav;
 
-    BlankFragment1 blankFragment1 = new BlankFragment1();
+    HomeActivityFragment homeActivityFragment = new HomeActivityFragment();
     BlankFragment2 blankFragment2 = new BlankFragment2();
     BlankFragment3 blankFragment3 = new BlankFragment3();
     BlankFragment4 blankFragment4 = new BlankFragment4();
@@ -44,7 +39,7 @@ public class HomeActivity extends AppCompatActivity {
 
         nav = findViewById(R.id.nav);
 
-        getSupportFragmentManager().beginTransaction().replace(R.id.layout,blankFragment1).commit();
+        getSupportFragmentManager().beginTransaction().replace(R.id.layout, homeActivityFragment).commit();
 
         nav.setOnItemSelectedListener(new NavigationBarView.OnItemSelectedListener() {
             @Override
@@ -53,7 +48,7 @@ public class HomeActivity extends AppCompatActivity {
                 switch (item.getItemId()){
 
                     case R.id.home:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.layout,blankFragment1).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.layout, homeActivityFragment).commit();
                         Toast.makeText(HomeActivity.this,"Home",Toast.LENGTH_LONG).show();
                         break;
 
