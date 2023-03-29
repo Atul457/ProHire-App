@@ -1,6 +1,15 @@
 <resources>
-    <string name="app_name">CrossTalk</string>
-    <string name="hindi">Hindi</string>
-    <!-- TODO: Remove or change this placeholder text -->
+    <string name="app_name">ProHire</string>
+    <string name="appDescription">Get your desired job</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="loading">Loading...</string>
+    <string name="signInButtonText">Sign in</string>
+    <string name="signUpButtonText">Sign up</string>
+    <string name="emailRequired">email is a required field</string>
+    <string name="emailInvalid">entered email is invalid</string>
+    <string name="passwordRequired">password is a required field</string>
+    <string name="phoneNumberRequired">phone number is a required field</string>
+    <string name="userNameRequired">username is a required field</string>
+    <string name="isUserLoggedIn">isUserLoggedIn</string>
+    <string name="userToken">userToken</string>
 </resources>
