@@ -1,27 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
-
-
     <item
         android:id="@+id/home"
-        android:icon="@drawable/home_24"
-        android:title="Home"/>
+        android:icon="@drawable/home_nav_icon"
+        android:title=""/>
 
     <item
-        android:id="@+id/account"
-        android:icon="@drawable/person"
-        android:title="Account"/>
+        android:id="@+id/job"
+        android:icon="@drawable/job_nav_icon"
+        android:title=""/>
 
     <item
         android:id="@+id/notification"
-        android:icon="@drawable/notifications_24"
-        android:title="notification bar"/>
+        android:icon="@drawable/notification_nav_icon"
+        android:title=""/>
 
     <item
-        android:id="@+id/search"
-        android:icon="@drawable/search"
-        android:title="search"/>
-
+        android:id="@+id/account"
+        android:icon="@drawable/profile_nav_icon"
+        android:title=""/>
 
 </menu>

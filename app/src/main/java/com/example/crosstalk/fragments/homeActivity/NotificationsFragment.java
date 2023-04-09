@@ -1,4 +1,4 @@
-package com.example.crosstalk;
+package com.example.crosstalk.fragments.homeActivity;
 
 import android.os.Bundle;
 
@@ -8,8 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.example.crosstalk.R;
 
-public class BlankFragment3 extends Fragment {
+
+public class NotificationsFragment extends Fragment {
 
 
     @Override

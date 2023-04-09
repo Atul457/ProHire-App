@@ -76,7 +76,6 @@ public class UserServiceModel {
         public class ResponseDataModel{
             private String email;
             private String token;
-
             private String name;
 
             public String getName() {

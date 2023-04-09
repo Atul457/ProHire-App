@@ -1,9 +1,9 @@
-package com.example.crosstalk.utils;
+package com.example.crosstalk.models;
 
 import javax.annotation.Generated;
 
 @Generated("By Rutuja")
-public class ErrorHandlingService {
+public class ErrorHandlingModel {
 
     public Boolean getStatus() {
         return status;

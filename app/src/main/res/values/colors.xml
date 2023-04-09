@@ -1,19 +1,23 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#0f9058</color>
-    <color name="colorPrimaryDark">#0f9058</color>
-    <color name="colorAccent">#03DAC5</color>
-
-    <color name="black_shade_1">#292036</color>
+    <color name="colorPrimary">#2395FE</color>
+    <color name="colorPrimaryDark">#2395FE</color>
+    <color name="colorAccent">#2395FE</color>
 
 
-    <color name="themeDarkBlueColor">#292036</color>
-    <color name="themeRedColor">#FF0000</color>
-    <color name="lightPrimaryColor">#2395FE</color>
-    <color name="themeBlackColor">#000</color>
-    <color name="themeGrayColor">#C0C0C0</color>
     <color name="themeSkyBlue">#2395FE</color>
+    <color name="themeBlackColor">#000</color>
+    <color name="themeRedColor">#ff1d1d</color>
+    <color name="black_shade_1">#292036</color>
+    <color name="themeLightBlue">#e7f7fd</color>
+    <color name="themeGrayColor">#C0C0C0</color>
+    <color name="lightPrimaryColor">#2395FE</color>
+    <color name="themeDarkBlueColor">#292036</color>
 
     <color name="white">#fff</color>
-    <color name="themeLightBlue">#e7f7fd</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+    <color name="light_blue_A200">#FF40C4FF</color>
+    <color name="light_blue_A400">#FF00B0FF</color>
+    <color name="black_overlay">#66000000</color>
 </resources>

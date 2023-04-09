@@ -11,7 +11,8 @@ import android.widget.Button;
 import android.widget.TextView;
 
 import com.example.crosstalk.models.UserServiceModel;
-import com.example.crosstalk.utils.ErrorHandlingService;
+import com.example.crosstalk.models.ErrorHandlingModel;
+import com.example.crosstalk.services.ApiService;
 import com.google.gson.Gson;
 
 import retrofit2.Call;
@@ -152,8 +153,8 @@ public class RegistrationActivity extends AppCompatActivity {
 
                             try {
 
-                                ErrorHandlingService error = (new Gson())
-                                        .fromJson(response.errorBody().charStream(), ErrorHandlingService.class);
+                                ErrorHandlingModel error = (new Gson())
+                                        .fromJson(response.errorBody().charStream(), ErrorHandlingModel.class);
 
                                 String message = error.getMessage();
                                 submitButtonRef.setText(R.string.signUpButtonText);

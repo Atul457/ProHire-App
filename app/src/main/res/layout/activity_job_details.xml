@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/jobDetailsActivity"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!--Header-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginHorizontal="12dp"
+        android:layout_marginTop="15dp">
+
+        <ImageView
+            android:id="@+id/goBackButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginEnd="5dp"
+            android:contentDescription="@string/goBackButton"
+            android:src="@drawable/chevron_left" />
+
+    </LinearLayout>
+    <!--End of Header-->
+
+    <include layout="@layout/screen_loader" />
+
+    <!--Job details-->
+    <ScrollView
+        android:id="@+id/jobDetailsView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/jobName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:text="@string/dummyJobName"
+                android:textColor="@color/themeBlackColor"
+                android:textSize="23sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/companyName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:text="Web softech"
+                android:textColor="@color/black_shade_1"
+                android:textSize="16sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="15dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="1dp"
+                    android:layout_marginRight="4dp"
+                    android:contentDescription="location_icon"
+                    android:src="@drawable/location_icon" />
+
+                <TextView
+                    android:id="@+id/companyLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:text="@string/dummyCompanyLocation"
+                    android:textColor="@color/black_shade_1"
+                    android:textSize="15sp" />
+
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/applyJobButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                app:cardBackgroundColor="@color/themeSkyBlue"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="0dp">
+
+                <TextView
+                    android:id="@+id/job_package"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:color="@color/white"
+                    android:gravity="center"
+                    android:padding="6dp"
+                    android:text="Apply"
+                    android:textColor="@color/white"
+                    android:textSize="13sp"
+                    android:textStyle="bold" />
+
+            </androidx.cardview.widget.CardView>
+
+
+            <include
+                layout="@layout/horizontal_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:text="@string/jobDetailsHeading"
+                android:textColor="@color/themeBlackColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--Salary details-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="14sp">
+
+                <ImageView
+                    android:layout_width="15sp"
+                    android:layout_height="15sp"
+                    android:layout_marginRight="6dp"
+                    android:contentDescription="salary_icon"
+                    android:src="@drawable/salary_icon_blue" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="5dp"
+                    android:text="Salary:"
+                    android:textColor="@color/themeBlackColor" />
+
+                <TextView
+                    android:id="@+id/salary"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:color="@color/white"
+                    android:text="40000"
+                    android:textColor="@color/black_shade_1" />
+
+            </LinearLayout>
+            <!--End of Salary details-->
+
+            <include
+                layout="@layout/horizontal_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:text="@string/fullJobDescription"
+                android:textColor="@color/themeBlackColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--Job description-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:textSize="14sp">
+
+                <TextView
+                    android:id="@+id/jobDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:color="@color/white"
+                    android:text="@string/dummyJobDescription"
+                    android:textColor="@color/black_shade_1" />
+
+            </LinearLayout>
+            <!--End of Job description-->
+
+            <include
+                layout="@layout/horizontal_divider"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginBottom="8dp"
+                android:text="@string/companyInformation"
+                android:textColor="@color/themeBlackColor"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+
+            <!--Contact Information-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:textSize="14sp">
+
+                <!--Company owner details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp">
+
+                    <ImageView
+                        android:layout_width="19sp"
+                        android:layout_height="19sp"
+                        android:layout_marginRight="6dp"
+                        android:contentDescription="person_icon"
+                        android:src="@drawable/person_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:text="Owner:"
+                        android:textColor="@color/themeBlackColor" />
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:color="@color/white"
+                        android:text="@string/appCreator"
+                        android:textColor="@color/black_shade_1" />
+
+                </LinearLayout>
+                <!--End of Company owner details-->
+
+                <!--Email details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14sp">
+
+                    <ImageView
+                        android:layout_width="19sp"
+                        android:layout_height="19sp"
+                        android:layout_marginRight="6dp"
+                        android:contentDescription="email_icon"
+                        android:src="@drawable/email_icon_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:text="Email:"
+                        android:textColor="@color/themeBlackColor" />
+
+                    <TextView
+                        android:id="@+id/userEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:color="@color/white"
+                        android:text="@string/dummyEmail"
+                        android:textColor="@color/black_shade_1" />
+
+                </LinearLayout>
+                <!--End of Email details-->
+
+                <!--Phone details-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:layout_marginBottom="5dp"
+                    android:textSize="14sp">
+
+                    <ImageView
+                        android:layout_width="19sp"
+                        android:layout_height="19sp"
+                        android:layout_marginRight="6dp"
+                        android:contentDescription="phone_icon"
+                        android:src="@drawable/phone_icon_blue" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginEnd="5dp"
+                        android:text="Phone:"
+                        android:textColor="@color/themeBlackColor" />
+
+                    <TextView
+                        android:id="@+id/userPhone"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:color="@color/white"
+                        android:text="@string/dummyPhoneNumber"
+                        android:textColor="@color/black_shade_1" />
+
+                </LinearLayout>
+                <!--End of Phone details-->
+
+            </LinearLayout>
+            <!--End of Contact Information-->
+
+
+        </LinearLayout>
+
+    </ScrollView>
+    <!--End of Job details-->
+
+</LinearLayout>

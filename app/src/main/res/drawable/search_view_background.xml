@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <shape xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:ignore="ExtraText">
+    tools:ignore="ExtraText"
     android:shape="rectangle">
 
-    <corners android:radius="20dp" />
-
+    <corners android:radius="100dp" />
     <solid android:color="#e7f7fd"></solid>
 </shape>

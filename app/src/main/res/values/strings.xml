@@ -1,8 +1,21 @@
 <resources>
     <string name="app_name">ProHire</string>
     <string name="appDescription">Get your desired job</string>
-    <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="loading">Loading...</string>
+    <string name="comingSoon">Coming soon</string>
+    <string name="goBackButton">Go back button</string>
+    <string name="dummyCompanyName">Web Dev Simplified</string>
+    <string name="dummyCompanyLocation">Chandigarh, Punjab</string>
+    <string name="companiesHeading">My companies</string>
+    <string name="createCompany">Create Company</string>
+    <string name="editCompany">Edit Company</string>
+    <string name="dummyJobName">Web Stack Dev</string>
+    <string name="jobDetailsHeading">About the job</string>
+    <string name="fullJobDescription">Full Job Description</string>
+    <string name="companyInformation">Company Information</string>
+    <string name="appCreator">Rutuja Bhende</string>
+    <string name="dummyEmail">dummy@mailinator.com</string>
+    <string name="dummyPhoneNumber">9999566664</string>
+    <string name="loading">Loading&#8230;</string>
     <string name="signInButtonText">Sign in</string>
     <string name="signUpButtonText">Sign up</string>
     <string name="emailRequired">email is a required field</string>
@@ -12,4 +25,23 @@
     <string name="userNameRequired">username is a required field</string>
     <string name="isUserLoggedIn">isUserLoggedIn</string>
     <string name="userToken">userToken</string>
+    <string name="title_activity_job_details">JobDetailsActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="companyPageInfo">From here you can manage you companies</string>
+    <string name="dummyJobDescription">We are a dynamic IT company seeking a Junior Job Provider to join our team. As a Junior Job Provider, you will be responsible for sourcing, recruiting, and hiring talented individuals to fill various positions within our company. You will work closely with our HR department to ensure that our hiring processes are efficient and effective. Additionally, you will be responsible for maintaining relationships with job seekers and other recruiters in the industry.
+    </string>
+    <string name="createCompanyInfo">Here you can create your own company</string>
+    <string name="editCompanyInfo">Here you can edit or delete your own company</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
 </resources>

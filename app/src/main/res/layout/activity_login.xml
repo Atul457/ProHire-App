@@ -50,7 +50,7 @@
                 android:background="@drawable/custom_edittext"
                 android:hint="Email"
                 android:textColor="@color/themeBlackColor"
-                android:textColorHighlight="@color/cardview_dark_background"
+                android:textColorHighlight="@color/card_view_dark_background"
                 android:textColorHint="@color/themeGrayColor" />
 
             <TextView
@@ -73,7 +73,7 @@
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:textColor="@color/themeBlackColor"
-                android:textColorHighlight="@color/cardview_dark_background"
+                android:textColorHighlight="@color/card_view_dark_background"
                 android:textColorHint="@color/themeGrayColor" />
 
             <TextView
