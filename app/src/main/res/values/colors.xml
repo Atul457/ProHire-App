@@ -6,8 +6,10 @@
 
 
     <color name="themeSkyBlue">#2395FE</color>
+    <color name="themeSuccessColor">#00A300</color>
     <color name="themeBlackColor">#000</color>
     <color name="themeRedColor">#ff1d1d</color>
+    <color name="themeLightRedColor">#ff6060</color>
     <color name="black_shade_1">#292036</color>
     <color name="themeLightBlue">#e7f7fd</color>
     <color name="themeGrayColor">#C0C0C0</color>

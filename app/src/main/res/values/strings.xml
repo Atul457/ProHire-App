@@ -1,13 +1,20 @@
 <resources>
     <string name="app_name">ProHire</string>
     <string name="appDescription">Get your desired job</string>
+    <string name="dummyName">John peterson</string>
     <string name="comingSoon">Coming soon</string>
     <string name="goBackButton">Go back button</string>
     <string name="dummyCompanyName">Web Dev Simplified</string>
     <string name="dummyCompanyLocation">Chandigarh, Punjab</string>
     <string name="companiesHeading">My companies</string>
+    <string name="notificationsHeading">Notifications</string>
+    <string name="profileWithHeading">Hey Username</string>
+    <string name="jobsOfCompanyHeading">Company\'s Jobs</string>
+    <string name="applicantsOfJobHeading">Job\'s Applicants</string>
     <string name="createCompany">Create Company</string>
+    <string name="createJob">Create Job</string>
     <string name="editCompany">Edit Company</string>
+    <string name="editJob">Edit Job</string>
     <string name="dummyJobName">Web Stack Dev</string>
     <string name="jobDetailsHeading">About the job</string>
     <string name="fullJobDescription">Full Job Description</string>
@@ -16,9 +23,16 @@
     <string name="dummyEmail">dummy@mailinator.com</string>
     <string name="dummyPhoneNumber">9999566664</string>
     <string name="loading">Loading&#8230;</string>
+    <string name="userPasswordPlaceholder">*********</string>
     <string name="signInButtonText">Sign in</string>
     <string name="signUpButtonText">Sign up</string>
     <string name="emailRequired">email is a required field</string>
+    <string name="companyNameRequired">company\'s name is a required field</string>
+    <string name="jobNameRequired">job\'s name is a required field</string>
+    <string name="companyLocationRequired">company\'s location is a required field</string>
+    <string name="jobDescriptionRequired">job\'s description is a required field</string>
+    <string name="jobSalaryRequired">job\'s description is a required field</string>
+    <string name="jobSalaryMustBeNumber">job\'s salary must be a number</string>
     <string name="emailInvalid">entered email is invalid</string>
     <string name="passwordRequired">password is a required field</string>
     <string name="phoneNumberRequired">phone number is a required field</string>
@@ -28,7 +42,7 @@
     <string name="title_activity_job_details">JobDetailsActivity</string>
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <!-- Strings used for fragments for navigation -->
+
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
     <string name="next">Next</string>
@@ -37,10 +51,17 @@
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="companyPageInfo">From here you can manage you companies</string>
+    <string name="notificationsPageInfo">Here you can see who have applied for your job</string>
+    <string name="profilePageInfo">We hope you are fine</string>
+    <string name="jobsOfCompanyPageInfo">From here you can manage jobs in a company</string>
+    <string name="applicantsOfJobPageInfo">Here you can see the applicants of the job being viewed</string>
     <string name="dummyJobDescription">We are a dynamic IT company seeking a Junior Job Provider to join our team. As a Junior Job Provider, you will be responsible for sourcing, recruiting, and hiring talented individuals to fill various positions within our company. You will work closely with our HR department to ensure that our hiring processes are efficient and effective. Additionally, you will be responsible for maintaining relationships with job seekers and other recruiters in the industry.
     </string>
     <string name="createCompanyInfo">Here you can create your own company</string>
+    <string name="createJobInfo">Here you can create your jobs under the company</string>
     <string name="editCompanyInfo">Here you can edit or delete your own company</string>
+    <string name="editJobInfo">Here you can edit or delete the jobs of the company</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

@@ -20,6 +20,11 @@
         <activity
             android:name=".CompanyActivity"
             android:exported="false" />
+
+        <activity
+            android:name=".JobActivity"
+            android:exported="false" />
+
         <activity
             android:name=".JobDetailsActivity"
             android:exported="false"

@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -13,6 +14,7 @@ import android.widget.TextView;
 import com.example.crosstalk.models.UserServiceModel;
 import com.example.crosstalk.models.ErrorHandlingModel;
 import com.example.crosstalk.services.ApiService;
+import com.example.crosstalk.utils.Constants;
 import com.google.gson.Gson;
 
 import retrofit2.Call;
@@ -22,7 +24,6 @@ import retrofit2.Response;
 public class RegistrationActivity extends AppCompatActivity {
 
     // Vars
-
     TextView email;
     View signInText;
     TextView password;
@@ -59,7 +60,7 @@ public class RegistrationActivity extends AppCompatActivity {
         phoneNumberInfoRef = findViewById(R.id.phoneNumberInfo);
 
         submitButtonRef = submitButton;
-        sharedPref = getPreferences(MODE_PRIVATE);
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
 
         // Removing header
         if (getSupportActionBar() != null) getSupportActionBar().hide();
@@ -194,9 +195,10 @@ public class RegistrationActivity extends AppCompatActivity {
     public void checkAlreadyLoggedIn() {
 
         if (sharedPref == null)
-            sharedPref = getPreferences(MODE_PRIVATE);
+            sharedPref = PreferenceManager
+                    .getDefaultSharedPreferences(getApplicationContext());
 
-        Boolean isUserLoggedIn = sharedPref.getBoolean("userLoggedIn", false);
+        Boolean isUserLoggedIn = sharedPref.getBoolean(Constants.USER_LOGGED_IN, false);
 
         if (isUserLoggedIn) {
             Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);
@@ -209,17 +211,22 @@ public class RegistrationActivity extends AppCompatActivity {
     public void loginUser(UserServiceModel.ResponseModel.ResponseDataModel data) {
 
         String token;
+        UserServiceModel.HandleHeadersModel handleHeadersModel;
         SharedPreferences.Editor editor;
 
-        if (sharedPref == null) sharedPref = getPreferences(MODE_PRIVATE);
+        if (sharedPref == null) sharedPref = PreferenceManager
+                .getDefaultSharedPreferences(getApplicationContext());
         token = data.getToken();
+
+        handleHeadersModel = new UserServiceModel.HandleHeadersModel(token);
 
         /* Saving user details to app storage */
         editor = sharedPref.edit();
-        editor.putString("userToken", token);
-        editor.putBoolean("userLoggedIn", true);
-        editor.putString("userEmail", data.getEmail());
-        editor.putString("userName", data.getName());
+        editor.putString(Constants.USER_TOKEN, token);
+        editor.putBoolean(Constants.USER_LOGGED_IN, true);
+        editor.putString(Constants.USER_EMAIL, data.getEmail());
+        editor.putString(Constants.USER_NAME, data.getName());
+        editor.putString(Constants.AUTHORIZATION_HEADER, handleHeadersModel.getAuthorization());
         editor.apply();
 
         Intent i = new Intent(RegistrationActivity.this, HomeActivity.class);

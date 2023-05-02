@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    tools:context=".fragments.homeActivity.CompanyFragment">
+
+    <!--Header-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="18dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp">
+
+        <TextView
+            android:id="@+id/notificationsHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="2dp"
+            android:text="@string/notificationsHeading"
+            android:textColor="@color/themeBlackColor"
+            android:textSize="23sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_below="@+id/notificationsHeading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/notificationsPageInfo"
+            android:textColor="@color/black_shade_1"
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+    <!--End of Header-->
+
+    <include layout="@layout/screen_loader" />
+
+    <LinearLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/resultsNotFoundContainer"
+        android:visibility="gone"
+        android:layout_marginHorizontal="18dp">
+        <include layout="@layout/results_not_found" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/notificationsList"
+        android:layout_width="match_parent"
+        android:visibility="visible"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical" />
+
+</LinearLayout>

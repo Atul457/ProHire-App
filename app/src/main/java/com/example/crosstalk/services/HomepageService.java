@@ -16,12 +16,14 @@ public class HomepageService {
     public HomeFragment homeFragment;
     public SearchFragment searchFragment;
     public Boolean isHomeFragment;
+    public String authorizationHeader;
 
 
-    public HomepageService(ApiService.JobServiceInterface jobService, Object fragment) {
+    public HomepageService(ApiService.JobServiceInterface jobService, Object fragment, String authorizationHeader) {
 
         this.isHomeFragment = false;
         this.jobService = jobService;
+        this.authorizationHeader = authorizationHeader;
 
         if (fragment instanceof HomeFragment) {
             this.isHomeFragment = true;
@@ -47,7 +49,7 @@ public class HomepageService {
                 gjr.getLs(),
                 gjr.getHs()
         );
-        call = jobService.getJobs(getJobsRequestData.getQueryString());
+        call = jobService.getJobs(authorizationHeader, getJobsRequestData.getQueryString());
         call.enqueue(new Callback<JobServiceModel.GetJobsResponseModel>() {
             @Override
             public void onResponse(Call<JobServiceModel.GetJobsResponseModel> call, Response<JobServiceModel.GetJobsResponseModel> response) {

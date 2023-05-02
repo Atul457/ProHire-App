@@ -1,5 +1,6 @@
 package com.example.crosstalk.fragments.homeActivity;
 
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
@@ -8,6 +9,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -21,6 +23,7 @@ import com.example.crosstalk.models.JobServiceModel;
 import com.example.crosstalk.services.ApiService;
 import com.example.crosstalk.services.HomepageService;
 import com.example.crosstalk.services.ShareDataService;
+import com.example.crosstalk.utils.Constants;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,10 +33,14 @@ public class SearchFragment extends Fragment {
 
     View view;
     View progressBar;
+    String searchValue;
     SearchView searchBox;
     ShareDataService sds;
     HomeFragment homeFragment;
     RecyclerView recyclerView;
+    String authorizationHeader;
+    SharedPreferences sharedPref;
+    View resultsNotFoundContainer;
     List<String> searchedDataList;
     FragmentManager fragmentManager;
     SearchResultsRecyclerAdapter adapter;
@@ -58,13 +65,19 @@ public class SearchFragment extends Fragment {
         jobService = ApiService.getJobService();
         searchBox = view.findViewById(R.id.searchBox);
         progressBar = view.findViewById(R.id.progressBar);
+        resultsNotFoundContainer = view.findViewById(R.id.resultsNotFoundContainer);
+
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
 
         // Focusing search box
         searchBox.requestFocus();
 
         recyclerView.setVisibility(View.GONE);
-        HomepageService homepageService = new HomepageService(jobService, this);
+        resultsNotFoundContainer.setVisibility(View.GONE);
+
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
+        authorizationHeader = sharedPref.getString(Constants.AUTHORIZATION_HEADER, "");
+        HomepageService homepageService = new HomepageService(jobService, this, authorizationHeader);
 
         adapter = new SearchResultsRecyclerAdapter(this);
         recyclerView.setAdapter(adapter);
@@ -93,14 +106,17 @@ public class SearchFragment extends Fragment {
             @Override
             public boolean onQueryTextSubmit(String query) {
                 searchFor(query);
+                searchValue = query;
                 return false;
             }
 
             @Override
             public boolean onQueryTextChange(String query) {
-                if (query.length() == 0)
+                searchValue = query;
+                if (query != null && query.length() == 0) {
+                    sds.setSearchedFor(null);
                     updateUi(new ArrayList<>());
-                else {
+                } else {
                     handleLoader(true);
                     homepageService.getJobs(query, 1, null, 20, null, null);
                 }
@@ -123,6 +139,11 @@ public class SearchFragment extends Fragment {
     }
 
     public void updateUi(List<JobServiceModel.JobModel> jobs) {
+        if (jobs.size() == 0 && searchValue != null && searchValue.length() > 0)
+            resultsNotFoundContainer.setVisibility(View.VISIBLE);
+        else
+            resultsNotFoundContainer.setVisibility(View.GONE);
+
         adapter.setSearchResults(jobs);
         handleLoader(false);
     }

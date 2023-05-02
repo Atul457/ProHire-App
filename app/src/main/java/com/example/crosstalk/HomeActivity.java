@@ -9,7 +9,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.crosstalk.fragments.homeActivity.CompanyFragment;
-import com.example.crosstalk.fragments.homeActivity.SecondFragment;
+import com.example.crosstalk.fragments.homeActivity.ProfileFragment;
 import com.example.crosstalk.fragments.homeActivity.HomeFragment;
 import com.example.crosstalk.fragments.homeActivity.NotificationsFragment;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -19,7 +19,7 @@ public class HomeActivity extends AppCompatActivity {
 
     BottomNavigationView nav;
     HomeFragment homeFragment = new HomeFragment();
-    SecondFragment secondFragment = new SecondFragment();
+    ProfileFragment profileFragment = new ProfileFragment();
     CompanyFragment companyFragment = new CompanyFragment();
     NotificationsFragment notificationsFragment = new NotificationsFragment();
 
@@ -58,7 +58,7 @@ public class HomeActivity extends AppCompatActivity {
                         break;
 
                     case R.id.account:
-                        getSupportFragmentManager().beginTransaction().replace(R.id.layout, secondFragment).commit();
+                        getSupportFragmentManager().beginTransaction().replace(R.id.layout, profileFragment).commit();
                         break;
 
                     default:

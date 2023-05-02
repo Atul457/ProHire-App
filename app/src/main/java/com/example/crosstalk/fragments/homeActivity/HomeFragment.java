@@ -1,5 +1,6 @@
 package com.example.crosstalk.fragments.homeActivity;
 
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -9,6 +10,7 @@ import androidx.lifecycle.ViewModelProvider;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.preference.PreferenceManager;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -23,19 +25,23 @@ import com.example.crosstalk.models.JobServiceModel;
 import com.example.crosstalk.services.ApiService;
 import com.example.crosstalk.services.HomepageService;
 import com.example.crosstalk.services.ShareDataService;
+import com.example.crosstalk.utils.Constants;
 
 import java.util.List;
 
 public class HomeFragment extends Fragment {
 
     View view;
+    Object query;
     View progressBar;
+    ShareDataService sds;
     SearchView searchBox;
-    // Number currPage = 1;
     Fragment searchFragment;
+    String authorizationHeader;
+    SharedPreferences sharedPref;
+    View resultsNotFoundContainer;
     HomepageService homepageService;
     FragmentManager fragmentManager;
-    // List<JobServiceModel.JobModel> jobs = null;
     HomeActivityRecyclerAdapter homeActivityRecyclerAdapter;
 
 
@@ -43,9 +49,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 
         // Declarations
-        Object query;
         String searchFor;
-        ShareDataService sds;
 
         // Inflate the layout for this fragment
         view = inflater.inflate(R.layout.home_activity_fragment, container, false);
@@ -54,10 +58,13 @@ public class HomeFragment extends Fragment {
         searchBox = view.findViewById(R.id.searchBox);
         progressBar = view.findViewById(R.id.progressBar);
         RecyclerView recyclerView = view.findViewById(R.id.job_profiles);
+        resultsNotFoundContainer = view.findViewById(R.id.resultsNotFoundContainer);
+
 
         searchFragment = new SearchFragment();
         homeActivityRecyclerAdapter = new HomeActivityRecyclerAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));
+        sharedPref = PreferenceManager.getDefaultSharedPreferences(getContext());
 
         // If there is something sent from search activity,
         // then search set the query/search value to that value
@@ -67,19 +74,23 @@ public class HomeFragment extends Fragment {
         if (searchFor != null && searchFor.trim().length() > 0) {
             query = searchFor;
             searchBox.setQuery(searchFor, false);
-        } else
+        } else {
             query = null;
+        }
 
         recyclerView.setAdapter(homeActivityRecyclerAdapter);
 
-        if (isAdded())
+        if (isAdded()) {
             fragmentManager = getActivity().getSupportFragmentManager();
+        }
 
         ApiService.JobServiceInterface jobService = ApiService.getJobService();
 
-        homepageService = new HomepageService(jobService, this);
+        authorizationHeader = sharedPref.getString(Constants.AUTHORIZATION_HEADER, "");
+        homepageService = new HomepageService(jobService, this, authorizationHeader);
         progressBar.setVisibility(View.VISIBLE);
-        homepageService.getJobs(query, 1, null, 20, null, null);
+        resultsNotFoundContainer.setVisibility(View.INVISIBLE);
+        homepageService.getJobs(query, null, null, null, null, null);
 
         searchBox.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -105,7 +116,28 @@ public class HomeFragment extends Fragment {
         return view;
     }
 
+    @Override
+    public void onPause() {
+        super.onPause();
+        sds.setSearchedFor("");
+        // Perform operation when Fragment is paused
+    }
+
+
+    @Override
+    public void onResume() {
+        super.onResume();
+        progressBar.setVisibility(View.VISIBLE);
+        resultsNotFoundContainer.setVisibility(View.INVISIBLE);
+        homepageService.getJobs(query, null, null, null, null, null);
+    }
+
+
     public void updateUi(List<JobServiceModel.JobModel> jobs) {
+        if (jobs.size() == 0)
+            resultsNotFoundContainer.setVisibility(View.VISIBLE);
+        else
+            resultsNotFoundContainer.setVisibility(View.GONE);
         homeActivityRecyclerAdapter.setJobs(jobs);
         progressBar.setVisibility(View.GONE);
     }

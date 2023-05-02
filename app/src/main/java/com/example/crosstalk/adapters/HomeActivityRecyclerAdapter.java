@@ -15,7 +15,10 @@ import com.example.crosstalk.JobDetailsActivity;
 import com.example.crosstalk.R;
 import com.example.crosstalk.models.JobServiceModel;
 
+import java.util.Date;
 import java.util.List;
+import org.ocpsoft.prettytime.PrettyTime;
+
 
 public class HomeActivityRecyclerAdapter extends RecyclerView.Adapter<HomeActivityRecyclerAdapter.HomeActivityRecyclerViewHolder> {
 
@@ -43,12 +46,19 @@ public class HomeActivityRecyclerAdapter extends RecyclerView.Adapter<HomeActivi
         String jobPackage = job.getJob_salary().toString();
         String jobProvider = job.getCompany_name();
         String jobReviews = job.getReviews().toString();
+        String jobPostedOn = job.getUpdated_at();
+
+        Date date = new Date(jobPostedOn);
+        PrettyTime prettyTime = new PrettyTime();
+        String formattedDate = prettyTime.format(date);
 
         holder.jobTitle.setText(jobTitle);
         holder.jobProvider.setText(jobProvider);
         holder.jobLocation.setText(jobLocation);
         holder.jobPackage.setText(jobPackage);
         holder.jobReviews.setText(jobReviews.trim() + " Reviews");
+        holder.jobCreatedOn.setText(formattedDate);
+
     }
 
     @Override
@@ -63,8 +73,8 @@ public class HomeActivityRecyclerAdapter extends RecyclerView.Adapter<HomeActivi
         TextView jobProvider;
         TextView jobLocation;
         TextView jobPackage;
-
         TextView jobReviews;
+        TextView jobCreatedOn;
 
         public HomeActivityRecyclerViewHolder(@NonNull View itemView) {
 
@@ -75,6 +85,7 @@ public class HomeActivityRecyclerAdapter extends RecyclerView.Adapter<HomeActivi
             jobLocation = itemView.findViewById(R.id.job_location);
             jobPackage = itemView.findViewById(R.id.job_package);
             jobReviews = itemView.findViewById(R.id.job_reviews);
+            jobCreatedOn = itemView.findViewById(R.id.job_post_time);
 
             itemView.setOnClickListener(this);
 

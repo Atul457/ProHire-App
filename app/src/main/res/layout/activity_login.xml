@@ -47,10 +47,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="20dp"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/edit_text_border_gray"
                 android:hint="Email"
                 android:textColor="@color/themeBlackColor"
-                android:textColorHighlight="@color/card_view_dark_background"
+                android:textColorHighlight="@color/themeBlackColor"
                 android:textColorHint="@color/themeGrayColor" />
 
             <TextView
@@ -69,11 +69,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:background="@drawable/custom_edittext"
+                android:background="@drawable/edit_text_border_gray"
                 android:hint="Password"
                 android:inputType="textPassword"
                 android:textColor="@color/themeBlackColor"
-                android:textColorHighlight="@color/card_view_dark_background"
+                android:textColorHighlight="@color/themeBlackColor"
                 android:textColorHint="@color/themeGrayColor" />
 
             <TextView

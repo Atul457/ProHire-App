@@ -149,8 +149,44 @@ public class JobServiceModel {
         }
     }
 
+    public class GetApplicationsOfJobResponse {
+        private Boolean status;
+        private Object message;
+        private List<UserServiceModel.UserModel> data;
+
+        public GetApplicationsOfJobResponse(Boolean status, Object message, List<UserServiceModel.UserModel> data) {
+            this.status = status;
+            this.message = message;
+            this.data = data;
+        }
+
+        public Boolean getStatus() {
+            return status;
+        }
+
+        public void setStatus(Boolean status) {
+            this.status = status;
+        }
+
+        public Object getMessage() {
+            return message;
+        }
+
+        public void setMessage(Object message) {
+            this.message = message;
+        }
+
+        public List<UserServiceModel.UserModel> getData() {
+            return data;
+        }
+
+        public void setData(List<UserServiceModel.UserModel> data) {
+            this.data = data;
+        }
+    }
+
     /**
-     * @returns GetJobsRequestModel type
+     * @returns GetJobsResponseModel type
      */
     public static class GetJobsResponseModel {
         private Boolean status;
@@ -312,9 +348,18 @@ public class JobServiceModel {
     public static class SingleJobModel extends JobModel {
 
         private String user_id;
-        private String user_email;
         private String user_name;
         private String user_phone;
+        private String user_email;
+        private Boolean is_my_job;
+
+        public Boolean getIs_my_job() {
+            return is_my_job;
+        }
+
+        public void setIs_my_job(Boolean is_my_job) {
+            this.is_my_job = is_my_job;
+        }
 
         public String getUser_phone() {
             return user_phone;
@@ -349,5 +394,336 @@ public class JobServiceModel {
         }
 
     }
+
+
+    /**
+     * @TODO Document this
+     */
+    public static class MyJobModel {
+        private String _id;
+        private String job_name;
+        private Number reviews;
+        private Number job_salary;
+        private String job_description;
+        private String created_at;
+        private String updated_at;
+
+
+        public String get_id() {
+            return _id;
+        }
+
+        public void set_id(String _id) {
+            this._id = _id;
+        }
+
+        public String getJob_name() {
+            return job_name;
+        }
+
+        public void setJob_name(String job_name) {
+            this.job_name = job_name;
+        }
+
+        public Number getReviews() {
+            return reviews;
+        }
+
+        public void setReviews(Number reviews) {
+            this.reviews = reviews;
+        }
+
+        public Number getJob_salary() {
+            return job_salary;
+        }
+
+        public void setJob_salary(Number job_salary) {
+            this.job_salary = job_salary;
+        }
+
+        public String getJob_description() {
+            return job_description;
+        }
+
+        public void setJob_description(String job_description) {
+            this.job_description = job_description;
+        }
+
+        public String getCreated_at() {
+            return created_at;
+        }
+
+        public void setCreated_at(String created_at) {
+            this.created_at = created_at;
+        }
+
+        public String getUpdated_at() {
+            return updated_at;
+        }
+
+        public void setUpdated_at(String updated_at) {
+            this.updated_at = updated_at;
+        }
+    }
+
+    /**
+     * @TODO Document this
+     */
+    public static class GetJobsOfCompanyResponseModel {
+        private Boolean status;
+        private Object message;
+        private List<MyJobModel> data;
+
+        public List<MyJobModel> getData() {
+            return data;
+        }
+
+        public void setData(List<MyJobModel> data) {
+            this.data = data;
+        }
+
+        public Boolean getStatus() {
+            return status;
+        }
+
+        public void setStatus(Boolean status) {
+            this.status = status;
+        }
+
+        public Object getMessage() {
+            return message;
+        }
+
+        public void setMessage(Object message) {
+            this.message = message;
+        }
+    }
+
+
+    /**
+     * @Todo Document this
+     */
+    public static class UpdateJobRequestModel {
+        private String job_id;
+        private Long job_salary;
+        private String job_name;
+        private String job_description;
+
+
+        public UpdateJobRequestModel(String job_id, Long job_salary, String job_name, String job_description) {
+            this.job_id = job_id;
+            this.job_salary = job_salary;
+            this.job_name = job_name;
+            this.job_description = job_description;
+        }
+
+        public String getJob_id() {
+            return job_id;
+        }
+
+        public void setJob_id(String job_id) {
+            this.job_id = job_id;
+        }
+
+        public Long getJob_salary() {
+            return job_salary;
+        }
+
+        public void setJob_salary(Long job_salary) {
+            this.job_salary = job_salary;
+        }
+
+        public String getJob_name() {
+            return job_name;
+        }
+
+        public void setJob_name(String job_name) {
+            this.job_name = job_name;
+        }
+
+        public String getJob_description() {
+            return job_description;
+        }
+
+        public void setJob_description(String job_description) {
+            this.job_description = job_description;
+        }
+    }
+
+
+    public static class DeleteJobRequestModel {
+        private String job_id;
+
+        public DeleteJobRequestModel(String job_id) {
+            this.job_id = job_id;
+        }
+
+        public String getJob_id() {
+            return job_id;
+        }
+
+        public void setJob_id(String job_id) {
+            this.job_id = job_id;
+        }
+    }
+
+
+    /**
+     * @Todo Document this
+     */
+    public static class UpdateJobResponseModel {
+        JobServiceModel.JobModel data;
+        private Boolean status;
+        private Object message;
+
+        public JobModel getData() {
+            return data;
+        }
+
+        public void setData(JobModel data) {
+            this.data = data;
+        }
+
+        public Boolean getStatus() {
+            return status;
+        }
+
+        public void setStatus(Boolean status) {
+            this.status = status;
+        }
+
+        public Object getMessage() {
+            return message;
+        }
+
+        public void setMessage(Object message) {
+            this.message = message;
+        }
+    }
+
+    /**
+     * @Todo Document this
+     */
+    public static class DeleteJobResponseModel {
+        private Boolean status;
+        private String message;
+        private Object data;
+
+        public Boolean getStatus() {
+            return status;
+        }
+
+        public void setStatus(Boolean status) {
+            this.status = status;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+        public Object getData() {
+            return data;
+        }
+
+        public void setData(Object data) {
+            this.data = data;
+        }
+    }
+
+
+    /**
+     * @Todo Document this
+     */
+    public static class CreateJobRequestModel {
+        private String job_name;
+        private Long job_salary;
+        private String company_id;
+        private String job_description;
+
+        public CreateJobRequestModel(String job_name, Long job_salary, String company_id, String job_description) {
+            this.job_name = job_name;
+            this.job_salary = job_salary;
+            this.company_id = company_id;
+            this.job_description = job_description;
+        }
+
+        public String getJob_name() {
+            return job_name;
+        }
+
+        public void setJob_name(String job_name) {
+            this.job_name = job_name;
+        }
+
+        public Long getJob_salary() {
+            return job_salary;
+        }
+
+        public void setJob_salary(Long job_salary) {
+            this.job_salary = job_salary;
+        }
+
+        public String getCompany_id() {
+            return company_id;
+        }
+
+        public void setCompany_id(String company_id) {
+            this.company_id = company_id;
+        }
+
+        public String getJob_description() {
+            return job_description;
+        }
+
+        public void setJob_description(String job_description) {
+            this.job_description = job_description;
+        }
+    }
+
+
+    /**
+     * @TODO Document this
+     */
+    public static class CreateJobResponseModel {
+        public Boolean status;
+        public String message;
+        public JobModel data;
+
+        public Boolean getStatus() {
+            return status;
+        }
+
+        public void setStatus(Boolean status) {
+            this.status = status;
+        }
+
+        public String getMessage() {
+            return message;
+        }
+
+        public void setMessage(String message) {
+            this.message = message;
+        }
+
+        public JobModel getData() {
+            return data;
+        }
+
+        public void setData(JobModel data) {
+            this.data = data;
+        }
+    }
+
+    /**
+     * @TODO Document this
+     */
+    public static class ApplyForJobResponse extends CreateJobResponseModel {
+
+    }
+
 
 }
