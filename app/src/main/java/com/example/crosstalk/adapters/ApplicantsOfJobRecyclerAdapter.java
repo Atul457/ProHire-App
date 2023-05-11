@@ -1,26 +1,17 @@
 package com.example.crosstalk.adapters;
 
-import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.ImageView;
 import android.widget.TextView;
 
 import androidx.annotation.NonNull;
-import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.crosstalk.R;
 import com.example.crosstalk.fragments.jobActivity.ApplicantsOfJobFragment;
-import com.example.crosstalk.fragments.jobActivity.CreateJobFragment;
-import com.example.crosstalk.fragments.jobActivity.EditJobFragment;
-import com.example.crosstalk.models.JobServiceModel;
 import com.example.crosstalk.models.UserServiceModel;
-import com.example.crosstalk.utils.Constants;
 
 import java.util.List;
 

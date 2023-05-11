@@ -4,6 +4,7 @@
     android:layout_height="wrap_content"
     android:layout_marginHorizontal="20dp"
     android:layout_marginBottom="20dp"
+    android:layout_marginTop="20dp"
     android:gravity="center_vertical"
     android:id="@+id/searched_item"
     android:paddingHorizontal="16dp">

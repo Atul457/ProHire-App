@@ -1,7 +1,5 @@
 package com.example.crosstalk.services;
 
-import android.content.Context;
-import android.content.SharedPreferences;
 
 import android.app.Application;
 

@@ -60,7 +60,6 @@ public class HomeFragment extends Fragment {
         RecyclerView recyclerView = view.findViewById(R.id.job_profiles);
         resultsNotFoundContainer = view.findViewById(R.id.resultsNotFoundContainer);
 
-
         searchFragment = new SearchFragment();
         homeActivityRecyclerAdapter = new HomeActivityRecyclerAdapter();
         recyclerView.setLayoutManager(new LinearLayoutManager(getContext()));

@@ -30,21 +30,25 @@
             android:exported="false"
             android:label="@string/title_activity_job_details"
             android:theme="@style/AppTheme.NoActionBar" />
+
         <activity
             android:name=".RegistrationActivity"
             android:exported="false" />
+
         <activity
             android:name=".LoginActivity"
             android:exported="false" />
+
         <activity
             android:name=".HomeActivity"
             android:exported="false" />
+
         <activity
             android:name=".SplashActivity"
             android:exported="true">
+
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>

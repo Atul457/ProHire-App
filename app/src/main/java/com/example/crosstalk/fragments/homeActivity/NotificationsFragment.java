@@ -15,12 +15,9 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.crosstalk.R;
-import com.example.crosstalk.adapters.HomeActivityRecyclerAdapter;
 import com.example.crosstalk.adapters.NotificationsRecyclerAdapter;
-import com.example.crosstalk.models.JobServiceModel;
 import com.example.crosstalk.models.NotificationServiceModel;
 import com.example.crosstalk.services.ApiService;
-import com.example.crosstalk.services.HomepageService;
 import com.example.crosstalk.services.NotificationServices;
 import com.example.crosstalk.utils.Constants;
 
