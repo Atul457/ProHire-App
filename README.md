@@ -18,4 +18,4 @@ ProHire is a job portal application for Android devices that enables users to cr
 
 1. Clone this repository to your local machine:
    ```bash
-   git clone https://github.com/your-username/prohire-android.git
+   git clone https://github.com/Atul457/ProHire-App.git
