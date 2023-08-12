@@ -1,40 +1,21 @@
-min-api-o error:
+# ProHire Android App
 
-all the following in android
+ProHire is a job portal application for Android devices that enables users to create and find job opportunities easily. With a user-friendly interface and intuitive features, ProHire makes job searching and posting efficient and convenient.
 
-compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_8
-        targetCompatibility JavaVersion.VERSION_1_8
-}
+## Features
 
-example:
-android {
-    compileSdkVersion 30
-    buildToolsVersion "30.0.0"
+- **Job Creation:** Users can easily create and post job listings to find suitable candidates for their job openings.
 
-    defaultConfig {
-        applicationId "com.example.crosstalk"
-        minSdkVersion 26
-        targetSdkVersion 30
-        versionCode 1
-        versionName "1.0"
+- **Job Search:** Job seekers can search for job opportunities based on various criteria such as job title, location, and skills.
 
-        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
-    }
+- **User Registration:** Users can register an account, providing their details and credentials for personalized experience.
 
-    buildTypes {
-        release {
-            minifyEnabled false
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-        }
-    }
-}
+- **Application Submission:** Job seekers can apply for jobs directly from the app, making the application process seamless.
 
+- **Notifications:** Get notified about job postings, application status updates, and more.
 
+## Installation
 
-/%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%/
-
-IStar not found/ Resource linking failed:
-
-Reduce the appcompat level from higher to: 
-implementation 'androidx.appcompat:appcompat:1.2.0'
+1. Clone this repository to your local machine:
+   ```bash
+   git clone https://github.com/Atul457/ProHire-App.git
